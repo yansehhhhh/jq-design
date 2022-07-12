@@ -1,0 +1,34 @@
+// 点点点加载特效
+.shadow_dot {
+  display: inline-block;
+  min-width: 2px;
+  min-height: 2px;
+  border-radius: 1px;
+  box-shadow: 4px 0 currentColor, 8px 0 currentColor, 12px 0 currentColor;
+  -webkit-animation: shadow 2s step-start infinite both;
+  animation: shadow 2s step-start infinite both;
+}
+
+.shadow_dot:before {
+  content: "...";
+  content: "";
+  color: rgba(0, 0, 0, 0.65);
+}
+
+:root .shadow_dot {
+  margin-right: 8px;
+}
+
+@keyframes shadow {
+  25% {
+    box-shadow: none;
+  }
+
+  50% {
+    box-shadow: 4px 0 currentColor;
+  }
+
+  75% {
+    box-shadow: 4px 0 currentColor, 8px 0 currentColor;
+  }
+}
